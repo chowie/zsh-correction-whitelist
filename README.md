@@ -8,7 +8,7 @@ command to a file whitelist file.  By default, the file is called
 the option:
 
 ```sh
-export ZSH\_CORRECTION\_WHITELIST\_FILE=_<filename>_
+ZSH\_CORRECTION\_WHITELIST\_FILE=_<filename>_
 ```
 
 ## Add commands to the whitelist
