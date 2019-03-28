@@ -1,3 +1,5 @@
+PWD="$(pwd)"
+
 _zsh_correction_whitelist() {
 
     string="$1"
@@ -24,18 +26,15 @@ _zsh_correction_whitelist_isAlias() {
 
 }
 
-source ./defaults.conf
+source "$PWD/defaults.conf"
 
 if [ -f "$ZSH_CORRECTION_WHITELIST_CONF" ]
 then
-    echo "Loading config file"
     source "$ZSH_CORRECTION_WHITELIST_CONF"
 fi
 
 export ZSH_CORRECTION_WHITELIST_FILE
 export ZSH_CORRECTION_WHITELIST_CONF
-
-echo "$ZSH_CORRECTION_WHITELIST_FILE"
 
 if [ -f $ZSH_CORRECTION_WHITELIST_FILE ]
 then
