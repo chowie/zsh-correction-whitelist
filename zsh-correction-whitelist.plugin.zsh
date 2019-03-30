@@ -1,3 +1,5 @@
+export ZSH_CORRECTION_WHITELIST_DIR="$(dirname $0)"
+
 _zsh_correction_whitelist() {
 
     string="$1"
@@ -24,7 +26,7 @@ _zsh_correction_whitelist_isAlias() {
 
 }
 
-source ./defaults.conf
+source "$ZSH_CORRECTION_WHITELIST_DIR/defaults.conf"
 
 if [ -f "$ZSH_CORRECTION_WHITELIST_CONF" ]
 then
@@ -34,8 +36,6 @@ fi
 
 export ZSH_CORRECTION_WHITELIST_FILE
 export ZSH_CORRECTION_WHITELIST_CONF
-
-echo "$ZSH_CORRECTION_WHITELIST_FILE"
 
 if [ -f $ZSH_CORRECTION_WHITELIST_FILE ]
 then
