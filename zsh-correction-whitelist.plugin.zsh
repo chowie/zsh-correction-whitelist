@@ -1,4 +1,4 @@
-PWD="$(pwd)"
+export ZSH_CORRECTION_WHITELIST_DIR="$(dirname $0)"
 
 _zsh_correction_whitelist() {
 
@@ -26,7 +26,7 @@ _zsh_correction_whitelist_isAlias() {
 
 }
 
-source "$PWD/defaults.conf"
+source "$ZSH_CORRECTION_WHITELIST_DIR/defaults.conf"
 
 if [ -f "$ZSH_CORRECTION_WHITELIST_CONF" ]
 then
